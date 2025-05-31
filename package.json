@@ -1,0 +1,19 @@
+{
+  "name": "slidev",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.49.29",
+    "@slidev/theme-default": "latest",
+    "@slidev/theme-seriph": "latest",
+    "naive-ui": "^2.41.0",
+    "sass-embedded": "^1.89.0"
+  },
+  "devDependencies": {
+    "@iconify-json/logos": "^1.2.4"
+  }
+}
