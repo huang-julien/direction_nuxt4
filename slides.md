@@ -11,8 +11,7 @@ transition: slide-left
 mdc: true
 ---
 
-# 🚗 Direction Nuxt 4 
-
+# 🚗 Direction Nuxt 4
 
 ---
 transition: fade-out
@@ -52,10 +51,16 @@ layout: intro
 
 - Meta-framework autour de VueJS et de NitroJS
 - Permet d'effectuer du rendu serveur d'application VueJS
-- Permet de générer un une application VueJS en statique
+- Permet de générer une application VueJS en statique
 - Prise en main ultra facile si vous connaissez déjà VueJS
 
 <NuxtTimeline v-click class="my-10 mx-auto" />
+
+<v-click>
+
+<img v-drag="[627,349,187,184]" src="/assets/finally.jpg" />
+
+</v-click>
 
 ---
 layout: intro
@@ -64,7 +69,6 @@ layout: intro
 # Nuxt 2 à 3
 
 ### Une migration... explosive
-
 
 <img src="/assets/nuxt_code_frequency.png" class="mx-auto w-1/2 mt-2" />
 
@@ -100,16 +104,14 @@ layout: intro
 layout: intro
 ---
 
-# Les changements les plus impactant
+# Les changements les plus impactants
 
 ---
 
-
 # Nouvelle convention de dossier
- 
 
 ::window{filename="nuxt.config.ts"}
- 
+
 ````md magic-move
 
 ```
@@ -141,7 +143,6 @@ layout: intro
   |- components
   |- composables
   |- layouts
-  |- middleware
   |- pages
   |- utils
   |- app.vue
@@ -160,12 +161,10 @@ layout: intro
 ````
 
 ::
- 
 
 ---
 
-# BEAUCOUP de changement pour `useAsyncData` et `useFetch`
-
+# BEAUCOUP de changements pour `useAsyncData` et `useFetch`
 
 ::window{filename="app.vue"}
 
@@ -189,13 +188,13 @@ const { data: data2, execute: execute2 } = await useFetch(key, () => {}, { immed
 
 ---
 
-# BEAUCOUP de changement pour `useAsyncData` et `useFetch`
+# BEAUCOUP de changements pour `useAsyncData` et `useFetch`
 
-### Correction de comportement 
+### Correction de comportement
 
 - Unicité des instances `asyncData`
 - `data` et `error` sont désormais `undefined` par défaut au lieu de `null`
-- `dedupe` est désormais `'cancel' | 'defer'` au lieu de `boolean`. `true` étati l'équivalent de `'cancel'`
+- `dedupe` est désormais `'cancel' | 'defer'` au lieu de `boolean`. `true` était l'équivalent de `'cancel'`
 
 ### Performances
 
@@ -203,55 +202,6 @@ const { data: data2, execute: execute2 } = await useFetch(key, () => {}, { immed
 
 ---
 
-# Data partagé entre toutes les pages lors des pre-render
-
-
-::window{filename="app.vue"}
-
-````md magic-move
- 
-```vue
-<template>
-  <div>
-    {{ data }} <!-- undefined -->
-  </div>
-</template>
-
-<script setup lang="ts">
-const route = useRoute()
-
-// Instead, you should use a key that uniquely identifies the data fetched.
-const { data } = await useAsyncData(route.params.slug, async () => {
-  return await $fetch(`/api/my-page/${route.params.slug}`)
-})
-</script>
-```
-
-```vue
-<template>
-  <div>
-    {{ data }} <!-- 'default data' -->
-  </div>
-</template>
-
-<script setup lang="ts">
-const route = useRoute()
-
-// Instead, you should use a key that uniquely identifies the data fetched.
-const { data } = await useAsyncData(route.params.slug, async () => {
-  return await $fetch(`/api/my-page/${route.params.slug}`)
-})
-</script>
-```
-
-````
-
-::
-
----
-
- 
- 
 # Auto-injection des noms de composants
 
 ::window
@@ -273,6 +223,8 @@ const { data } = await useAsyncData(route.params.slug, async () => {
 
 ::window{filename="MonSuperComposant.test.ts"}
 
+````md magic-move
+
 ```ts
 describe('UI', () => {
   it('blabla', async () => {
@@ -280,22 +232,26 @@ describe('UI', () => {
       shallow: true
     })
 
-    expect(wrapper.find({ name: 'UnAutreComposant' }).exists()).toBeThruthy()
+    expect(wrapper.find({ name: 'Composant' }).exists()).toBeTruthy()
   })
 })
 ```
 
+```ts
+describe('UI', () => {
+  it('blabla', async () => {
+    const wrapper = await mountSuspended(MonSuperComposant, {
+      shallow: true
+    })
+
+    expect(wrapper.find({ name: 'UnAutreComposant' }).exists()).toBeTruthy()
+  })
+})
+```
+
+````
+
 ::
-
-
----
-
-# Suppression de différents feature flags
-
-- `experimental.treeshakeClientOnly` -> `true`
-- `experimental.configSchema` -> `true`
-- `experimental.polyfillVueUseHead` -> `false`
-- `experimental.respectNoSSRHeader` -> `false`
 
 ---
 
@@ -343,4 +299,21 @@ export default defineNuxtConfig({
 
 ---
 
-# 
+# Roadmap
+
+- Nuxt 4 Alpha
+  2 juin 2025
+- Nuxt 4 stable
+  Fin juin 2025
+- Nuxt 3
+  Support jusqu'à fin 2025
+
+---
+layout: intro
+---
+
+# Nuxt 5 ?
+
+<img v-drag="[56,187,260,194]" src="/assets/scared.jpg" />
+
+en attente de nitro V3
