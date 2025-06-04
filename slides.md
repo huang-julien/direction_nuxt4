@@ -301,11 +301,11 @@ export default defineNuxtConfig({
 
 # Roadmap
 
-- Nuxt 4 Alpha
+- Nuxt 4 "Alpha"  
   2 juin 2025
-- Nuxt 4 stable
+- Nuxt 4 stable  
   Fin juin 2025
-- Nuxt 3
+- Nuxt 3  
   Support jusqu'à fin 2025
 
 ---
@@ -317,3 +317,7 @@ layout: intro
 <img v-drag="[56,187,260,194]" src="/assets/scared.jpg" />
 
 en attente de nitro V3
+
+---
+
+# Merci !
