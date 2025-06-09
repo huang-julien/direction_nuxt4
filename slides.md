@@ -199,6 +199,7 @@ const { data: data2, execute: execute2 } = await useFetch(key, () => {}, { immed
 ### Performances
 
 - Data partagées entre les `asyncData` durant la phase de pre-render
+- `data` est désormais une `ShallowRef` et non plus une `Ref` par défaut
 
 ---
 
@@ -319,5 +320,19 @@ layout: intro
 en attente de nitro V3
 
 ---
+layout: intro
+---
+
 
 # Merci !
+
+
+<div>
+<logos-github-icon /> @huang-julien
+</div>
+<div>
+<logos-bluesky /> julienhuang-dev.bsky.social
+</div>
+<div>
+<logos-linkedin-icon /> julien-huang
+</div>
