@@ -334,7 +334,7 @@ layout: intro
 ---
 
 
-# Merci !
+# Merci ! 💖
 
 
 <div>
