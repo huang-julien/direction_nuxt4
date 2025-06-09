@@ -58,6 +58,16 @@ layout: intro
 
 <v-click>
 
+<div v-drag="[26,363,147,74]" class="grid grid-cols-2">
+
+<img  src="/assets/seb_c.jpg"  />
+<img  src="/assets/alex_c.jpg" />
+
+</div>
+</v-click>
+
+<v-click>
+
 <img v-drag="[627,349,187,184]" src="/assets/finally.jpg" />
 
 </v-click>
