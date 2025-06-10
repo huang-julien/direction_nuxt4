@@ -266,6 +266,13 @@ describe('UI', () => {
 
 ---
 
+# Liste des breaking changes sur nuxt.com
+
+<iframe class="w-full h-full" src="https://nuxt.com/docs/getting-started/upgrade" />
+
+
+---
+
 # Preview de Nuxt 4
 
 ::window{filename="nuxt.config.ts"}
