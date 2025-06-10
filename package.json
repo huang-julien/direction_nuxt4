@@ -7,13 +7,14 @@
     "export": "slidev export"
   },
   "dependencies": {
-    "@slidev/cli": "^0.49.29",
+    "@slidev/cli": "^51.8.1",
     "@slidev/theme-default": "latest",
     "@slidev/theme-seriph": "latest",
     "naive-ui": "^2.41.0",
     "sass-embedded": "^1.89.0"
   },
   "devDependencies": {
-    "@iconify-json/logos": "^1.2.4"
+    "@iconify-json/logos": "^1.2.4",
+    "playwright-chromium": "^1.52.0"
   }
 }
